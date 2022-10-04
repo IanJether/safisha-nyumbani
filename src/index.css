@@ -163,7 +163,8 @@ code {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 630px;
+  height: 620px;
+  padding-bottom: 10px;
 }
 .indoortoppart{
   display: flex;
@@ -275,7 +276,8 @@ code {
 /* the cart element  */
 
 .cart{
-  padding: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
