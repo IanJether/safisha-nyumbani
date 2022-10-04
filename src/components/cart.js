@@ -59,6 +59,7 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className="extrasdis">
+                               <div id='extrap'> <p>Extras</p></div>
                                 <div className='rootone root'>
                                     <div><p>Laundry</p></div>
                                     <div><p>{items.Lprice}/=</p></div>

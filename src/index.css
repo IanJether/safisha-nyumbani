@@ -287,6 +287,12 @@ code {
   font-weight: bold;
   color: #979b9c;
 }
+#extrap{
+  font-weight: bold;
+  color: #979b9c;
+  margin-bottom: -23px;
+  font-size: 16px;
+}
 .daten{
   font-weight: bold;
   font-size: 18px;
