@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import Cart from "./components/cart";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Indoor from "./components/Indoor";
+import Navbar from "./components/Navbar";
+import Outdoor from "./components/Outdoor";
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Home/>
+          <div className="appcontent">
+              <div className="appleft">
+                        <div className="homeselect">
+                          <div className="homeselectone line">
+
+                          </div>
+                          <div className="homeselecttwo">
+                            <Link to="/"><button>Indoor</button></Link>
+                          <Link to="/outdoor"><button>Outdoor</button></Link>
+                              <button>Heavy Lifting</button>
+                          </div>
+                          <div className="homeselectthree line">
+                              
+                          </div>
+                        </div>
+                <Switch>
+                    <Route exact path="/">
+                        <Indoor/>                   
+                    </Route>
+                    <Route exact path="/outdoor">
+                        <Outdoor/>
+                    </Route>
+                </Switch>
+              </div>
+              <div className="appright">
+                  <Cart/>
+              </div>
+          </div>
+        <Footer/>
+        
     </div>
+    </Router>
   );
 }
 

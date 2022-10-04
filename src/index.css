@@ -11,3 +11,364 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* the app.js file */
+
+.appcontent{
+  display: flex;
+}
+.appleft{
+  flex: 80%;
+  border: 1px solid #0071a8;
+}
+.appright{
+  flex: 20%;
+  border: 1px solid #0071a8;
+}
+
+
+
+/* the navbar  */
+
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 3px 3px 20px #dee2e4;
+  align-items: center;
+}
+.navright{
+  display: flex;
+}
+.navright div{
+  margin-left: 70px;
+}
+.navlogo img{
+  height: 70px;
+  margin-left: 10px;
+}
+.navbook button{
+  margin-top: 8px;
+  height: 40px;
+  width: 150px;
+  padding: 5px ;
+  background-color: #0071a8;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border:1px solid #0071a8 ;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+.navbar p{
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+
+/* The Home element  */
+
+.hometop{
+  background-color:#f199ff;
+  background-image:
+  radial-gradient(at 91% 58%, hsla(222,88%,74%,1) 0px, transparent 50%),
+  radial-gradient(at 79% 44%, hsla(346,91%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 3% 76%, hsla(238,74%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 69% 64%, hsla(108,97%,77%,1) 0px, transparent 50%),
+  radial-gradient(at 93% 58%, hsla(334,73%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 5% 88%, hsla(238,67%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 96% 58%, hsla(353,88%,79%,1) 0px, transparent 50%);
+  }
+.hometop img{
+  height: 400px;
+  width: 100%;
+  object-position: center center;
+}
+.hometop{
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  text-align: center;
+}
+.inputdiv h2{
+  font-size: 45px;
+  color: #fff;
+}
+.inputdiv h3{
+  font-size: 27px;
+  margin-top: -30px;
+  font-weight: 400;
+  color: #fff;
+}
+.whichserv{
+  height: 50px;
+  width: 400px;
+  background-color:#fff ;
+  color: rgb(129, 128, 128);
+  font-size:20px ;
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+.books{
+  height: 60px;
+  width: 180px;
+  background-color: #0071a8;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border:1px solid #0071a8 ;
+  margin-top: -10px;
+}
+.hometoph3{
+  color: white;
+  font-size: 24px;
+  margin-top: -20px;
+}
+
+
+.homeselect{
+  display: flex;
+  justify-content: space-around;
+}
+.line{
+  border-top: 4px solid #0071a8;
+  width: 30%;
+}
+.homeselectone, .homeselectthree{
+  margin-top: 50px;
+}
+.homeselecttwo button{
+  margin-top: 20px;
+  height: 60px;
+  width: 140px;
+  background-color:#fff;
+  color: #0071a8;
+  font-size: 20px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
+}
+
+
+/* the indoor element  */
+
+.Indoor{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 630px;
+}
+.indoortoppart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Indoor h3{
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.ioselects{
+  display: flex;
+  margin-bottom: 30px;
+}
+.ioselectone{
+  margin-right: 50px;
+}
+.ioselects select{
+  height: 40px;
+  width: 240px;
+  font-size: 17px;
+  margin-top: 4px;
+}
+.ioextras{
+
+  margin-right: 60px;
+}
+.ioextras p{
+  margin-top: -17px;
+}
+.iosubmitbutton button{
+  height: 40px;
+  width: 120px;
+  background-color:#0071a8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
+}
+.extrabutton {
+  display: flex;
+  justify-content: space-around;
+}
+.extrabutton button{
+  height: 120px;
+  width: 120px;
+  background-color:#fff;
+  color: #0071a8;
+  font-size: 15px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 10px;
+  border-radius: 80px;
+}
+#lastwall{
+  margin-right: 0px;
+}
+
+/* the outdoor element  */
+
+.outdoor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.outdoor h3{
+  font-size: 30px;
+  font-weight: 400;
+}
+.howlongbuttons button{
+  height: 70px;
+  width: 70px;
+  background-color: #fff ;
+  border: 1px solid #0071a8;
+  border-radius: 50px ;
+  color: black;
+  font-size: 30px;
+  font-weight:100;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.odtasks{
+  margin-top: 40px;
+}
+.odbuttons{
+  display: flex;
+  margin-top: 80px;
+}
+.odbuttons div{
+  padding: 10px;
+  font-size: 18px;
+  border-right: 4px solid #0071a8;
+
+}
+
+
+
+
+
+
+/* the cart element  */
+
+.cart{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+}
+.date p{
+  font-weight: bold;
+  color: #979b9c;
+}
+.daten{
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+.date{
+  border-bottom: 2px solid rgb(214, 212, 212);
+}
+.rooms{
+  font-weight: bold;
+  color: #979b9c;
+}
+.roomsdis{
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  border-bottom: 2px solid rgb(214, 212, 212);
+  padding-bottom: 12px;
+}
+.extrasdis{
+  border-bottom: 2px solid rgb(214, 212, 212);
+}
+.extrasdis{
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+.cartbutton button{
+  height: 40px;
+  width: 120px;
+  background-color:#0071a8;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
+  
+}
+.cartbutton{
+  display: flex;
+  justify-content: center;
+}
+
+.root{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/* The footer element  */
+
+.footer{
+  height: 440px;
+  background-color: #373935;
+}
+.footer p{
+  font-weight: bold;
+  font-size: px;
+  color: white;
+}
+.footer div{
+  margin-bottom: 15px;
+}
+.footersosho{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.footersosho img{
+  height: 60px;
+  margin-left: 90px;
+}
+.footertop{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  border-bottom: 1px solid rgb(150, 136, 136);
+}
+.footerbottom{
+  display: flex;
+  justify-content: space-between;
+}
+.footercopyright{
+  margin-right: 100px;
+}
