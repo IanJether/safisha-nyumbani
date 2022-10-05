@@ -162,27 +162,27 @@ const Indoor = () => {
         if(butt === 'Laundry'){
             setLprice(100)
         }else{
-            console.log()
+             setLprice(0)
         }
         if(buttone === 'Oven'){
             setOprice(100)
         }else{
-            console.log()
+            setOprice(0)
         };
         if(buttwo === 'Cabinets'){
             setCprice(100)
         }else{
-            console.log()
+             setCprice(0)
         };
         if(butthree === 'Windows'){
             setWprice(100)
         }else{
-            console.log()
+            setWprice(0)
         };
         if(buttfour === 'Interior Walls'){
             setIprice(100)
         }else{
-            console.log()
+            setIprice(0)
         };
 
     })
