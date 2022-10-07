@@ -2,8 +2,10 @@ import {
     collection,addDoc,getDoc,doc,onSnapshot,serverTimestamp
  } from 'firebase/firestore'
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { db } from "../firebase/config";
 import { random } from './random';
+
 
 
 
@@ -14,7 +16,8 @@ const Cart = ({buttt,butttone,butttwo,buttthree,butttfour,butt, buttone, buttwo,
     const date = new Date();
     const n = date.toDateString();
 
-    const colRef = collection(db, 'Clients' )
+    const colRef = collection(db, 'Clients' );
+    const history = useHistory();
 
 
    const [click,setClicked] = useState(false)
@@ -45,6 +48,7 @@ const Cart = ({buttt,butttone,butttwo,buttthree,butttfour,butt, buttone, buttwo,
     
                 })
                 .then(()=>{
+                    history.push('/');
                     console.log('Bedrooms added to firebase');
                     window.location.reload();
                 })
