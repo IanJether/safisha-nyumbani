@@ -5,12 +5,17 @@ import Indoor from "./components/Indoor";
 import Navbar from "./components/Navbar";
 import Outdoor from "./components/Outdoor";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import useOutdoor from "./components/Outdoor";
+import useIndoor from "./components/Indoor";
 
 
 
 function App() {
 
 
+ const {renderoutdoor, hours, hourp, gprice, clprice, Oprice, wprice, pprice} = useOutdoor()
+ const {renderindoor, bed,bathnum, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice} = useIndoor();
+ 
 
   return (
     <Router>
@@ -24,9 +29,9 @@ function App() {
 
                           </div>
                           <div className="homeselecttwo">
-                            <Link to="/"><button>Indoor</button></Link>
-                          <Link to="/outdoor"><button>Outdoor</button></Link>
-                              <button>Heavy Lifting</button>
+                            <button>Indoor</button>
+                           <button>Outdoor</button>
+                            
                           </div>
                           <div className="homeselectthree line">
                               
@@ -34,15 +39,16 @@ function App() {
                         </div>
                 <Switch>
                     <Route exact path="/">
-                        <Indoor/>                   
+                        {renderindoor}                  
                     </Route>
                     <Route exact path="/outdoor">
-                        <Outdoor/>
+                        {renderoutdoor}
                     </Route>
+                   
                 </Switch>
               </div>
               <div className="appright">
-                  <Cart/>
+                  <Cart  {...{ hours, hourp, bathnum, gprice, clprice, Oprice, wprice, pprice, bed, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice}}/>
               </div>
           </div>
         <Footer/>

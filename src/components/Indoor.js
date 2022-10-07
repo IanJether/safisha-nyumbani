@@ -4,14 +4,16 @@ import {
   } from 'firebase/firestore'
 import { db } from "../firebase/config";
 import { random } from "./random";
+import { Link } from "react-router-dom";
 
 
 
 
-const Indoor = () => {
+const useIndoor = () => {
 
   
 
+    
     const colRef = collection(db, `${random}`)
 
     const [bed,setBed] = useState('Bedrooms');
@@ -20,6 +22,7 @@ const Indoor = () => {
     const [bednum,setBednum] = useState(0); 
     const [bathprice,setBathprice] = useState(0);  
     const [bathnum,setBathnum] = useState(0); 
+
    useEffect(()=>{
 
     if(bed === '1 Bedroom'){
@@ -46,6 +49,8 @@ const Indoor = () => {
         setBednum(6)
     } else{
        setBed('0 Bedrooms')
+       setBedprice(0)
+       setBednum(0)
     }
 
    })
@@ -75,9 +80,18 @@ const Indoor = () => {
         setBathnum(6)
     } else{
         setBath('0 Bathrooms')
+        setBathprice(0)
+        setBathnum(0)
     }
 
    })
+
+    const[lprice,setLprice] = useState(0);
+    const[oprice,setOprice] = useState(0);
+    const[cprice,setCprice] = useState(0);
+    const[Wprice,setWprice] = useState(0);
+    const[iprice,setIprice] = useState(0);
+
 
     const[butt,setButt] = useState('false');
     const[buttone,setButtone] = useState('false');
@@ -90,9 +104,11 @@ const Indoor = () => {
             document.querySelector(".butt").style.border = '1px solid #29b949';
             document.querySelector(".butt").style.backgroundColor = 'rgb(240, 255, 244)';
             setButt('Laundry')
+            setLprice(100)
 
         }else{
             setButt('false');
+            setLprice(0)
             document.querySelector(".butt").style.color = '#0071a8';
             document.querySelector(".butt").style.border = '1px solid #0071a8';
             document.querySelector(".butt").style.backgroundColor = '#fff';
@@ -104,8 +120,10 @@ const Indoor = () => {
             document.querySelector(".buttone").style.border = '1px solid #29b949';
             document.querySelector(".buttone").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtone('Oven')
+            setOprice(100)
          }else{
             setButtone('false');
+            setOprice(0)
             document.querySelector(".buttone").style.color = '#0071a8';
             document.querySelector(".buttone").style.border = '1px solid #0071a8';
             document.querySelector(".buttone").style.backgroundColor = '#fff';
@@ -117,8 +135,10 @@ const Indoor = () => {
             document.querySelector(".buttwo").style.border = '1px solid #29b949';
             document.querySelector(".buttwo").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtwo('Cabinets')
+            setCprice(100)
          }else{
             setButtwo('false');
+            setCprice(0)
             document.querySelector(".buttwo").style.color = '#0071a8';
             document.querySelector(".buttwo").style.border = '1px solid #0071a8';
             document.querySelector(".buttwo").style.backgroundColor = '#fff';
@@ -130,8 +150,10 @@ const Indoor = () => {
             document.querySelector(".butthree").style.border = '1px solid #29b949';
             document.querySelector(".butthree").style.backgroundColor = 'rgb(240, 255, 244)';
             setButthree('Windows')
+            setWprice(100)
          }else{
             setButthree('false');
+            setWprice(0)
             document.querySelector(".butthree").style.color = '#0071a8';
             document.querySelector(".butthree").style.border = '1px solid #0071a8';
             document.querySelector(".butthree").style.backgroundColor = '#fff';
@@ -143,85 +165,21 @@ const Indoor = () => {
             document.querySelector(".buttfour").style.border = '1px solid #29b949';
             document.querySelector(".buttfour").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtfour('Interior Walls')
+            setIprice(100)
          }else{
             setButtfour('false');
+            setIprice(0)
             document.querySelector(".buttfour").style.color = '#0071a8';
             document.querySelector(".buttfour").style.border = '1px solid #0071a8';
             document.querySelector(".buttfour").style.backgroundColor = '#fff';
          }
     }
     
-    const[lprice,setLprice] = useState(0);
-    const[oprice,setOprice] = useState(0);
-    const[cprice,setCprice] = useState(0);
-    const[Wprice,setWprice] = useState(0);
-    const[iprice,setIprice] = useState(0);
-
-    useEffect(()=>{
-        
-        if(butt === 'Laundry'){
-            setLprice(100)
-        }else{
-             setLprice(0)
-        }
-        if(buttone === 'Oven'){
-            setOprice(100)
-        }else{
-            setOprice(0)
-        };
-        if(buttwo === 'Cabinets'){
-            setCprice(100)
-        }else{
-             setCprice(0)
-        };
-        if(butthree === 'Windows'){
-            setWprice(100)
-        }else{
-            setWprice(0)
-        };
-        if(buttfour === 'Interior Walls'){
-            setIprice(100)
-        }else{
-            setIprice(0)
-        };
-
-    })
-    
 
 
-    const [click,setClicked] = useState(false)
-    const handleClick = () => {
-
-        if (click == false){
-            addDoc(colRef , {
-                Bedrooms : bed,
-                Bedprice: bedprice,
-                Bednum: bednum,
-                Bathrooms: bath,
-                Bathprice: bathprice,
-                Bathnum: bathnum,
-                CreatedAt: serverTimestamp(),
-                LaundryExtra: butt,
-                Lprice : lprice,
-                OvenExtra:buttone,
-                Oprice : oprice,
-                CabinetsExra: buttwo,
-                Cprice : cprice,
-                WindowsExtra: butthree,
-                Wprice : Wprice,
-                InteriorExtra: buttfour,
-                Iprice : iprice,
-            })
-            .then(()=>{
-                console.log('Bedrooms added to firebase');
-            })
-            setClicked(true)
-        }else{
-          console.log('Cant be clicked anymore')
-        } 
-    
-    }
-    return ( 
+    return {
+        bed,bedprice,bednum,bath,bathprice,bathnum,lprice,oprice,cprice,Wprice,iprice,
+        renderindoor:( 
         <div className="Indoor">
             <div className="indoortoppart">
                 <div><p>Book trusted, reliable home cleaners</p></div>
@@ -279,11 +237,11 @@ const Indoor = () => {
             </div>
             <div className="iosubmitbutton">
 
-                <div><button onClick={handleClick}>GET PRICE</button></div>
+                <div><Link to="/outdoor"><button>GO TO OUTDOOR</button></Link></div>
             </div>
         </div>
-     );
+     )};
 }
  
-export default Indoor ;
+export default useIndoor ;
 

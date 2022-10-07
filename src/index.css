@@ -145,7 +145,7 @@ code {
 .homeselecttwo button{
   margin-top: 20px;
   height: 60px;
-  width: 140px;
+  width: 126px;
   background-color:#fff;
   color: #0071a8;
   font-size: 20px;
@@ -236,36 +236,53 @@ code {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
+  height: 620px;
 }
 .outdoor h3{
   font-size: 30px;
   font-weight: 400;
 }
-.howlongbuttons button{
-  height: 70px;
-  width: 70px;
+.howlongselections select{
+  height: 40px;
+  width: 330px;
   background-color: #fff ;
-  border: 1px solid #0071a8;
-  border-radius: 50px ;
   color: black;
-  font-size: 30px;
+  font-size: 16px;
   font-weight:100;
   margin-left: 30px;
   margin-top: 10px;
 }
 .odtasks{
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .odbuttons{
   display: flex;
-  margin-top: 80px;
+  margin-top: 30px;
 }
-.odbuttons div{
-  padding: 10px;
-  font-size: 18px;
-  border-right: 4px solid #0071a8;
-
+.odbuttons button{
+  height: 120px;
+  width: 120px;
+  background-color:#fff;
+  color: #0071a8;
+  font-size: 15px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 0px;
+  border-radius: 80px;
+}
+.submitbutton button{
+  margin-top: 40px;
+  height: 40px;
+  width: 120px;
+  background-color:#0071a8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  border:1px solid #0071a8 ;
+  cursor: pointer;
 }
 
 
@@ -293,10 +310,16 @@ code {
   margin-bottom: -23px;
   font-size: 16px;
 }
+#extrapp{
+  font-weight: bold;
+  color: #979b9c;
+  font-size: 16px;
+}
 .daten{
   font-weight: bold;
   font-size: 18px;
   color: black;
+  margin-bottom: -15px;
 }
 .date{
   border-bottom: 2px solid rgb(214, 212, 212);
@@ -307,7 +330,7 @@ code {
 }
 .roomsdis{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   border-bottom: 2px solid rgb(214, 212, 212);
   padding-bottom: 12px;
@@ -317,7 +340,7 @@ code {
 }
 .extrasdis{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   color: black;
 }
 .cartbutton button{
@@ -339,6 +362,15 @@ code {
 .root{
   display: flex;
   justify-content: space-between;
+}
+.extraspace{
+  margin-top: -30px;
+}
+.outdoordis{
+  border-bottom: 2px solid rgb(214, 212, 212);
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
 }
 
 

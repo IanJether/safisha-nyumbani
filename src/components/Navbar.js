@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from './Pictures/Logo.png';
 
 const Navbar = () => {
@@ -5,7 +6,7 @@ const Navbar = () => {
         <div className="navbar">
           <div className="navleft">
                <div className="navlogo">
-                    <img src={require('./Pictures/Logo2.png')} alt="Logo" />
+                 <Link to='/'><img src={require('./Pictures/Logo2.png')} alt="Logo" /></Link>
                </div>
           </div>
           <div className="navright">
