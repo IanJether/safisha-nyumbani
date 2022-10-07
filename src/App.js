@@ -13,8 +13,8 @@ import useIndoor from "./components/Indoor";
 function App() {
 
 
- const {renderoutdoor, hours, hourp, gprice, clprice, Oprice, wprice, pprice} = useOutdoor()
- const {renderindoor, bed,bathnum, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice} = useIndoor();
+ const {renderoutdoor,buttt,butttone,butttwo,buttthree,butttfour, hours, hourp, gprice, clprice, Oprice, wprice, pprice} = useOutdoor()
+ const {renderindoor,butt,buttone,buttwo,butthree,buttfour, bed,bathnum, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice} = useIndoor();
  
 
   return (
@@ -48,7 +48,7 @@ function App() {
                 </Switch>
               </div>
               <div className="appright">
-                  <Cart  {...{ hours, hourp, bathnum, gprice, clprice, Oprice, wprice, pprice, bed, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice}}/>
+                  <Cart  {...{buttt,butttone,butttwo,buttthree,butttfour, butt, buttone, buttwo, butthree, buttfour, hours, hourp, bathnum, gprice, clprice, Oprice, wprice, pprice, bed, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice}}/>
               </div>
           </div>
         <Footer/>

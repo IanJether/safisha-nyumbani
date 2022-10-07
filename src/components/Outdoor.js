@@ -16,7 +16,7 @@ const useOutdoor = () => {
     const colRef = collection(db, `${random}`)
 
 
-    const [hours,setHours] = useState('1 Hour');
+    const [hours,setHours] = useState('');
     const [hourp,setHourp] = useState(0)
 
     useEffect(()=>{
@@ -44,7 +44,7 @@ const useOutdoor = () => {
         if(hours === '8 Hours'){
             setHourp(800)
         }else{
-            console.log('Cant input this')
+             setHourp(0)
         }
     })
 
@@ -54,14 +54,14 @@ const useOutdoor = () => {
     const [wprice,setWprice] = useState (0);
     const [pprice,setPprice] = useState (0);
 
-    const[butt,setButt] = useState('false');
-    const[buttone,setButtone] = useState('false');
-    const[buttwo,setButtwo] = useState('false');
-    const[butthree,setButthree] = useState('false');
-    const[buttfour,setButtfour] = useState('false');
+    const[buttt,setButt] = useState('');
+    const[butttone,setButtone] = useState('');
+    const[butttwo,setButtwo] = useState('');
+    const[buttthree,setButthree] = useState('');
+    const[butttfour,setButtfour] = useState('');
 
     const handleButton = ()=>{
-        if(butt === 'false'){
+        if(buttt === ''){
             document.querySelector(".odbutt").style.color = '#29b949';
             document.querySelector(".odbutt").style.border = '1px solid #29b949';
             document.querySelector(".odbutt").style.backgroundColor = 'rgb(240, 255, 244)';
@@ -69,7 +69,7 @@ const useOutdoor = () => {
             setGprice(100);
 
         }else{
-            setButt('false');
+            setButt('');
             setGprice(0);
             document.querySelector(".odbutt").style.color = '#0071a8';
             document.querySelector(".odbutt").style.border = '1px solid #0071a8';
@@ -77,14 +77,14 @@ const useOutdoor = () => {
         }
     }
     const handleButtonone = ()=>{
-         if(buttone === 'false'){
+         if(butttone === ''){
             document.querySelector(".odbuttone").style.color = '#29b949';
             document.querySelector(".odbuttone").style.border = '1px solid #29b949';
             document.querySelector(".odbuttone").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtone('General Cleaning')
             setCprice(100)
          }else{
-            setButtone('false');
+            setButtone('');
             setCprice(0);
             document.querySelector(".odbuttone").style.color = '#0071a8';
             document.querySelector(".odbuttone").style.border = '1px solid #0071a8';
@@ -92,14 +92,14 @@ const useOutdoor = () => {
          }
     }
     const handleButtontwo = ()=>{
-         if(buttwo === 'false'){
+         if(butttwo === ''){
             document.querySelector(".odbuttwo").style.color = '#29b949';
             document.querySelector(".odbuttwo").style.border = '1px solid #29b949';
             document.querySelector(".odbuttwo").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtwo('Outside Windows')
             setOprice(100);
          }else{
-            setButtwo('false');
+            setButtwo('');
             setOprice(0);
             document.querySelector(".odbuttwo").style.color = '#0071a8';
             document.querySelector(".odbuttwo").style.border = '1px solid #0071a8';
@@ -107,14 +107,14 @@ const useOutdoor = () => {
          }
     }
     const handleButtonthree = ()=>{
-        if(butthree === 'false'){
+        if(buttthree === ''){
             document.querySelector(".odbutthree").style.color = '#29b949';
             document.querySelector(".odbutthree").style.border = '1px solid #29b949';
             document.querySelector(".odbutthree").style.backgroundColor = 'rgb(240, 255, 244)';
             setButthree('Car Washing');
             setWprice(100);
          }else{
-            setButthree('false');
+            setButthree('');
             setWprice(0);
             document.querySelector(".odbutthree").style.color = '#0071a8';
             document.querySelector(".odbutthree").style.border = '1px solid #0071a8';
@@ -122,14 +122,14 @@ const useOutdoor = () => {
          }
     }
     const handleButtonfour = ()=>{
-        if(buttfour === 'false'){
+        if(butttfour === ''){
             document.querySelector(".odbuttfour").style.color = '#29b949';
             document.querySelector(".odbuttfour").style.border = '1px solid #29b949';
             document.querySelector(".odbuttfour").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtfour('Pool Cleaning')
             setPprice(100);
          }else{
-            setButtfour('false');
+            setButtfour('');
             setPprice(0)
             document.querySelector(".odbuttfour").style.color = '#0071a8';
             document.querySelector(".odbuttfour").style.border = '1px solid #0071a8';
@@ -143,7 +143,7 @@ const useOutdoor = () => {
 
 
     return {
-        hours,hourp,gprice,clprice,Oprice,wprice,pprice,
+        hours,hourp,gprice,clprice,Oprice,wprice,pprice,buttt,butttone,butttwo,buttthree,butttfour,
         renderoutdoor :( 
         <div className="outdoor">
             <div><p>Clean your garden,windows,pool and Car</p></div>

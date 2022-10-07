@@ -307,7 +307,7 @@ code {
 #extrap{
   font-weight: bold;
   color: #979b9c;
-  margin-bottom: -23px;
+  margin-bottom: -8px;
   font-size: 16px;
 }
 #extrapp{
@@ -358,13 +358,8 @@ code {
   display: flex;
   justify-content: center;
 }
-
-.root{
-  display: flex;
-  justify-content: space-between;
-}
 .extraspace{
-  margin-top: -30px;
+  margin-top: -10px;
 }
 .outdoordis{
   border-bottom: 2px solid rgb(214, 212, 212);

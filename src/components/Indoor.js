@@ -16,8 +16,8 @@ const useIndoor = () => {
     
     const colRef = collection(db, `${random}`)
 
-    const [bed,setBed] = useState('Bedrooms');
-    const [bath,setBath] = useState('Bathrooms');
+    const [bed,setBed] = useState('');
+    const [bath,setBath] = useState('');
     const [bedprice,setBedprice] = useState(0);  
     const [bednum,setBednum] = useState(0); 
     const [bathprice,setBathprice] = useState(0);  
@@ -48,7 +48,7 @@ const useIndoor = () => {
         setBedprice(350)
         setBednum(6)
     } else{
-       setBed('0 Bedrooms')
+       setBed('')
        setBedprice(0)
        setBednum(0)
     }
@@ -79,7 +79,7 @@ const useIndoor = () => {
         setBathprice(350)
         setBathnum(6)
     } else{
-        setBath('0 Bathrooms')
+        setBath('')
         setBathprice(0)
         setBathnum(0)
     }
@@ -93,13 +93,13 @@ const useIndoor = () => {
     const[iprice,setIprice] = useState(0);
 
 
-    const[butt,setButt] = useState('false');
-    const[buttone,setButtone] = useState('false');
-    const[buttwo,setButtwo] = useState('false');
-    const[butthree,setButthree] = useState('false');
-    const[buttfour,setButtfour] = useState('false');
+    const[butt,setButt] = useState('');
+    const[buttone,setButtone] = useState('');
+    const[buttwo,setButtwo] = useState('');
+    const[butthree,setButthree] = useState('');
+    const[buttfour,setButtfour] = useState('');
     const handleButton = ()=>{
-        if(butt === 'false'){
+        if(butt === ''){
             document.querySelector(".butt").style.color = '#29b949';
             document.querySelector(".butt").style.border = '1px solid #29b949';
             document.querySelector(".butt").style.backgroundColor = 'rgb(240, 255, 244)';
@@ -107,7 +107,7 @@ const useIndoor = () => {
             setLprice(100)
 
         }else{
-            setButt('false');
+            setButt('');
             setLprice(0)
             document.querySelector(".butt").style.color = '#0071a8';
             document.querySelector(".butt").style.border = '1px solid #0071a8';
@@ -115,14 +115,14 @@ const useIndoor = () => {
         }
     }
     const handleButtonone = ()=>{
-         if(buttone === 'false'){
+         if(buttone === ''){
             document.querySelector(".buttone").style.color = '#29b949';
             document.querySelector(".buttone").style.border = '1px solid #29b949';
             document.querySelector(".buttone").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtone('Oven')
             setOprice(100)
          }else{
-            setButtone('false');
+            setButtone('');
             setOprice(0)
             document.querySelector(".buttone").style.color = '#0071a8';
             document.querySelector(".buttone").style.border = '1px solid #0071a8';
@@ -130,14 +130,14 @@ const useIndoor = () => {
          }
     }
     const handleButtontwo = ()=>{
-         if(buttwo === 'false'){
+         if(buttwo === ''){
             document.querySelector(".buttwo").style.color = '#29b949';
             document.querySelector(".buttwo").style.border = '1px solid #29b949';
             document.querySelector(".buttwo").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtwo('Cabinets')
             setCprice(100)
          }else{
-            setButtwo('false');
+            setButtwo('');
             setCprice(0)
             document.querySelector(".buttwo").style.color = '#0071a8';
             document.querySelector(".buttwo").style.border = '1px solid #0071a8';
@@ -145,14 +145,14 @@ const useIndoor = () => {
          }
     }
     const handleButtonthree = ()=>{
-        if(butthree === 'false'){
+        if(butthree === ''){
             document.querySelector(".butthree").style.color = '#29b949';
             document.querySelector(".butthree").style.border = '1px solid #29b949';
             document.querySelector(".butthree").style.backgroundColor = 'rgb(240, 255, 244)';
             setButthree('Windows')
             setWprice(100)
          }else{
-            setButthree('false');
+            setButthree('');
             setWprice(0)
             document.querySelector(".butthree").style.color = '#0071a8';
             document.querySelector(".butthree").style.border = '1px solid #0071a8';
@@ -160,14 +160,14 @@ const useIndoor = () => {
          }
     }
     const handleButtonfour = ()=>{
-        if(buttfour === 'false'){
+        if(buttfour === ''){
             document.querySelector(".buttfour").style.color = '#29b949';
             document.querySelector(".buttfour").style.border = '1px solid #29b949';
             document.querySelector(".buttfour").style.backgroundColor = 'rgb(240, 255, 244)';
             setButtfour('Interior Walls')
             setIprice(100)
          }else{
-            setButtfour('false');
+            setButtfour('');
             setIprice(0)
             document.querySelector(".buttfour").style.color = '#0071a8';
             document.querySelector(".buttfour").style.border = '1px solid #0071a8';
@@ -178,7 +178,7 @@ const useIndoor = () => {
 
 
     return {
-        bed,bedprice,bednum,bath,bathprice,bathnum,lprice,oprice,cprice,Wprice,iprice,
+        bed,bedprice,bednum,bath,bathprice,bathnum,lprice,oprice,cprice,Wprice,iprice,butt,buttone,buttwo,butthree,buttfour,
         renderindoor:( 
         <div className="Indoor">
             <div className="indoortoppart">

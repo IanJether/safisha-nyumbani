@@ -9,7 +9,7 @@ import { random } from './random';
 
 
 
-const Cart = ({hours, hourp, gprice, clprice, Oprice, wprice, pprice,bed,bathnum, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice}) => {
+const Cart = ({buttt,butttone,butttwo,buttthree,butttfour,butt, buttone, buttwo, butthree, buttfour,hours, hourp, gprice, clprice, Oprice, wprice, pprice,bed,bathnum, bedprice, bednum, bath, bathprice, lprice, oprice, cprice, Wprice, iprice}) => {
 
     const date = new Date();
     const n = date.toDateString();
@@ -19,6 +19,7 @@ const Cart = ({hours, hourp, gprice, clprice, Oprice, wprice, pprice,bed,bathnum
 
    const [click,setClicked] = useState(false)
    const handleConfirm = () =>{
+    alert('Your service order has been placed, Please allow 30 minutes for arrival of personell');
     if (click === false){
                 console.log('iF STATEMENT RUNNING')
                 addDoc(colRef , {
@@ -66,59 +67,20 @@ const Cart = ({hours, hourp, gprice, clprice, Oprice, wprice, pprice,bed,bathnum
                         <div className="cartdp">
                             <div className="roomsdis">
                                 <div className='rootone root'>
-                                    <div><p>{bednum} Bedrooms</p></div>
-                                    <div><p>{bedprice}</p></div>
-                                </div>
-                                <div className='rootone root'>
-                                    <div><p>{bathnum} Bathrooms</p></div>
-                                    <div><p>{bathprice}</p></div>
+                                    <div><p>{bed}&nbsp;&nbsp;&nbsp; {bath} </p></div>
                                 </div>
                             </div>
                             <div className="extrasdis">
                                <div id='extrap'> <p>Extras</p></div>
                                 <div className='rootone root'>
-                                    <div><p>Laundry</p></div>
-                                    <div><p>{lprice}</p></div>
-                                </div>
-                                <div className='rootone extraspace root'>
-                                    <div><p>Oven</p></div>
-                                    <div><p>{oprice}</p></div>
-                                </div>
-                                <div className='rootone extraspace root'>
-                                    <div><p>Cabinets</p></div>
-                                    <div><p> {cprice}</p></div>
-                                </div>
-                                <div className='rootone extraspace root'>
-                                    <div><p>Windows</p></div>
-                                    <div> <p> {Wprice}</p></div>
-                                </div>
-                                <div className='rootone extraspace root'>
-                                    <div><p>Interior Walls</p></div>
-                                    <div> <p> {iprice}</p></div>
+                                    <div><p>{butt}&nbsp;&nbsp;&nbsp;{buttone}&nbsp;&nbsp;&nbsp;{buttwo}&nbsp;&nbsp;&nbsp;{butthree}&nbsp;&nbsp;&nbsp;{buttfour}</p></div>
                                 </div>
                             </div>
                             <div className="outdoordis">
                                 <div id='extrapp'><p>Outdoor</p></div>
                                 <div><p>{hours}</p></div>
                                 <div className="gardening extraspace root">
-                                    <div><p>Gardening</p></div>
-                                    <div><p>{gprice}</p></div>
-                                </div>
-                                <div className="gcleaning extraspace root">
-                                    <div><p>General Cleaning</p></div>
-                                    <div><p>{clprice}</p></div>
-                                </div>
-                                <div className="oswindows extraspace root">
-                                    <div><p>Outside Cleaning</p></div>
-                                    <div><p>{Oprice}</p></div>
-                                </div>
-                                <div className="Car washing extraspace root">
-                                    <div><p>Car Washing</p></div>
-                                    <div><p>{wprice}</p></div>
-                                </div>
-                                <div className="Pool Cleaning extraspace root">
-                                    <div><p>Pool Cleaning</p></div>
-                                    <div><p>{pprice}</p></div>
+                                    <div><p>{buttt}&nbsp;&nbsp;&nbsp;{butttone}&nbsp;&nbsp;&nbsp;{butttwo}&nbsp;&nbsp;&nbsp;{buttthree}&nbsp;&nbsp;&nbsp;{butttfour}</p></div>
                                 </div>
                             </div>
                             <div className="servicedis root">
