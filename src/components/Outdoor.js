@@ -13,6 +13,11 @@ import { Link } from "react-router-dom";
 const useOutdoor = () => {
 
 
+  
+
+   
+
+
     const colRef = collection(db, `${random}`)
 
 
@@ -138,6 +143,16 @@ const useOutdoor = () => {
     }
 
 
+    const handleHighligh = ()=>{
+        document.getElementById('indoorbutton').style.backgroundColor = '#0071a8';
+        document.getElementById('indoorbutton').style.color = '#fff';
+        
+
+        document.getElementById('outdoorbutton').style.backgroundColor = '#fff';
+        document.getElementById('outdoorbutton').style.color = '#0071a8';
+
+    }
+
     
      
 
@@ -182,7 +197,7 @@ const useOutdoor = () => {
                     <div><button onClick={handleButtonfour} className="odbuttfour"> Pool Cleaning</button></div>
                 </div>
                 <div className="submitbutton">
-                 
+                    <Link to='/'><button onClick={handleHighligh}>BACK TO INDOOR</button> </Link>
                 </div>
             </div>
         </div>

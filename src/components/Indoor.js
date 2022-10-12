@@ -174,6 +174,18 @@ const useIndoor = () => {
             document.querySelector(".buttfour").style.backgroundColor = '#fff';
          }
     }
+
+
+    const handleHigh = () => {
+    
+        document.getElementById('indoorbutton').style.backgroundColor = '#fff';
+        document.getElementById('indoorbutton').style.color = '#0071a8';
+        
+
+        document.getElementById('outdoorbutton').style.backgroundColor = '#0071a8';
+        document.getElementById('outdoorbutton').style.color = '#fff';
+
+    }
     
 
 
@@ -237,7 +249,7 @@ const useIndoor = () => {
             </div>
             <div className="iosubmitbutton">
 
-                <div><Link to="/outdoor"><button>GO TO OUTDOOR</button></Link></div>
+                <div><Link to="/outdoor"><button onClick={handleHigh}>GO TO OUTDOOR</button></Link></div>
             </div>
         </div>
      )};

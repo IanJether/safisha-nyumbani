@@ -29,8 +29,8 @@ function App() {
 
                           </div>
                           <div className="homeselecttwo">
-                            <button>Indoor</button>
-                           <button>Outdoor</button>
+                            <button id="indoorbutton">Indoor</button>
+                           <button id="outdoorbutton">Outdoor</button>
                             
                           </div>
                           <div className="homeselectthree line">

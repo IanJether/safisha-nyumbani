@@ -146,12 +146,19 @@ code {
   margin-top: 20px;
   height: 60px;
   width: 126px;
-  background-color:#fff;
-  color: #0071a8;
   font-size: 20px;
   font-weight: 100;
-  border:1px solid #0071a8 ;
   cursor: pointer;
+}
+#indoorbutton{
+  background-color:#0071a8;
+  color: #fff;
+  border:1px solid #0071a8 ;
+}
+#outdoorbutton{
+  background-color:#fff;
+  color: #0071a8;
+  border:1px solid #0071a8 ;
 }
 
 
